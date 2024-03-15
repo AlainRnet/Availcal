@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<layout
+		title="com_availcal_view_darkperiods" option="com_availcal_view_darkperiods_option">
+		
+		<message>
+			<![CDATA[com_availcal_darkperiods_view_default_desc]]>
+		</message>
+	</layout>
+</metadata>

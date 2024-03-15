@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0.0" type="plugin" group="content" method="upgrade">
+    <name>Availability Calendar Plugin</name>
+    <author>Jan Maat</author>
+    <creationDate>May 2013</creationDate>
+    <copyright>This extension in released under the GNU/GPL License -
+        http://www.gnu.org/copyleft/gpl.html</copyright>
+    <authorEmail>jenj.maat@gmail.com/pedro.baeza@gmail.com</authorEmail>
+    <version>07_0_4</version>
+    <description>PLG_CONTENT_AVAILCAL_DESCRIPTION</description>
+
+
+    <files>
+        <filename plugin="availcal">availcal.php</filename>
+        <filename>index.html</filename>
+        <folder>language</folder>				
+    </files>
+
+
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="week_number" type="checkbox" value="1"
+                                       label="SHOW_WEEK_NUMBER" description="SHOW_WEEK_NUMBER_DESC" />
+                <field name="display_mode" type="list" default="" label="SELECT_DISPLAY_MODE" description="SHOW CALENDAR AS BLOCK OR WITH NAVIGATION">
+                    <option value="0">FIXED_BLOCK</option>
+                    <option value="1">NAVIGATION_ONE_MONTH</option>
+                    <option value="2">NAVIGATION_THREE_MONTH</option>                    
+                </field>
+                
+                <field name="nbr_months" type="text" size="2" default="3"
+                                       label="NBR_OF_MONTHS" description="MONTHS_DISPLAY" />
+                <field name="week_firstday" type="radio" size="1" default="0"
+                                       label="WEEK_FIRSTDAY" description="WEEK_FIRSTDAY_DESC">
+                    <option value="0">WEEK_FIRSTDAY_SUNDAY</option>
+                    <option value="1">WEEK_FIRSTDAY_MONDAY</option>
+                </field>
+                <field name="firstlast" type="checkbox" value="1"
+                                       label="FIRST_LAST_DAY" description="SHOW_DIFFERENT_STYLE_FIRST_LAST_DAY" />
+					
+            </fieldset>
+            <fieldset name="CUSTOM_CSS">				
+                <field name="customCss" type="textarea" default="default" label="ENTER_CSS" description="ENTER_CSS_DESC" rows="10" cols="70" filter="raw"/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>	

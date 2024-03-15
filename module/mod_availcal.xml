@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0.0" method="upgrade">
+	<name>availcal</name>
+	<author>Jan Maat</author>
+	<copyright>Copyright (C) 2009-2013 </copyright>
+	<creationDate>May 2013</creationDate>
+	<license>GNU/GPL</license>
+	<authorEmail>jenj.maat@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>07_0_4</version>
+	<description>MOD_AVAILCAL_DESCRIPTION</description>
+	<files>
+		<filename module="mod_availcal">mod_availcal.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_availcal.xml</filename>
+		<folder>language</folder>
+	</files>
+	<!--<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_availcal.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_availcal.sys.ini</language>
+		<language tag="nl-NL">nl-NL/nl-NL.mod_availcal.ini</language>
+		<language tag="nl-NL">nl-NL/nl-NL.mod_availcal.sys.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_availcal.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_availcal.sys.ini</language>
+		<language tag="es-ES">es-ES/es-ES.mod_availcal.ini</language>
+		<language tag="es-ES">es-ES/es-ES.mod_availcal.sys.ini</language>
+	</languages>-->
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="week_number" type="checkbox" value="1"
+					label="SHOW_WEEK_NUMBER" description="SHOW_WEEK_NUMBER_DESC" />				
+				<field name="name" type="text" size="20" 
+					label="OBJECT_NAME" description="OBJECT_NAME_DESC" />
+				<field name="week_firstday" type="radio" size="1" default="0"
+					label="WEEK_FIRSTDAY" description="WEEK_FIRSTDAY_DESC">
+					<option value="0">WEEK_FIRSTDAY_SUNDAY</option>
+					<option value="1">WEEK_FIRSTDAY_MONDAY</option>
+				</field>
+				<field name="firstlast" type="checkbox" value="1"
+					label="FIRST_LAST_DAY" description="SHOW_DIFFERENT_STYLE_FIRST_LAST_DAY" />
+			</fieldset>
+			<fieldset name="CUSTOM_CSS">				
+				<field name="customCss" type="textarea" default="default" label="ENTER_CSS" description="ENTER_CSS_DESC" rows="10" cols="70" filter="raw"/>
+			</fieldset>
+                        <fieldset
+				name="advanced">				
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />	
+			</fieldset>
+		</fields>
+	</config>
+	
+</extension>

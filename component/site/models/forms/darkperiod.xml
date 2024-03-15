@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/administrator/components/com_availcal/models/fields">
+		<field name="id" type="hidden" />
+		<field name="name" type="text" label="NAAM" 
+			size="40" class="inputbox" required="true" default="" />
+		<field name="busy" type="list" default="" label="BUSY">
+			<option value="1">FULL</option>
+			<option value="0">PARTLY</option>
+		</field>
+		<field name="start_date" type="calendar" default="NOW"
+			label="START_DATUM"  format="%Y-%m-%d" />
+		<field name="end_date" type="calendar" default="NOW"
+			label="END_DATUM"  format="%Y-%m-%d" />
+		<field name="remarks" type="text" label="OPMERKING" 
+			size="40" class="inputbox" default="" />
+	</fieldset>
+</form>
+

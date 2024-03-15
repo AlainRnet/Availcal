@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0.0" method="upgrade">
+	<name>availcal</name>
+	<author>Jan Maat</author>
+	<copyright>Copyright (C) 2009-2012 </copyright>
+	<creationDate>May 2013</creationDate>
+	<license>GNU/GPL</license>
+	<authorEmail>jenj.maat@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>07_0_4</version>
+	<description>COM_AVAILCAL_DESCRIPTION</description>
+	
+	<!-- Install/Uninstall Section -->
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	
+	<scriptfile>script.php</scriptfile>
+	
+	
+	<!-- Site Main File Section -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>availcal.php</filename>
+		<filename>controller.php</filename>
+                <folder>controllers</folder>
+		<folder>views</folder>
+		<folder>models</folder>
+                <folder>assets</folder>
+                <folder>language</folder>
+	</files>
+	
+	<!-- Administration File Section -->
+	<administration>
+	
+		<menu>COM_AVAILCAL</menu>
+		<submenu>
+			<menu link="option=com_availcal">DARKPERIODS</menu>	
+			<menu link="option=com_availcal&amp;view=xmlupload" view="xmlupload">XML_UPLOAD	</menu>
+					
+		</submenu>
+		
+		<files folder="admin">
+			<folder>sql</folder>
+                        <folder>help</folder>
+			
+			
+			<folder>tables</folder>
+			<folder>models</folder>
+			<!-- views files section -->
+			<folder>views</folder>
+			<!-- controllers files section -->
+			<folder>controllers</folder>
+			<folder>assets</folder>
+							
+			<filename>availcal.php</filename>			
+			<filename>controller.php</filename>					
+			<filename>index.html</filename>
+                        <filename>config.xml</filename>
+			<filename>access.xml</filename>
+		<folder>language</folder>
+                </files>
+		
+		
+					
+	</administration>
+	
+	
+
+</extension>
+

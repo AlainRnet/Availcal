@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+.availcal	{
+		
+}
+.table_pos 	{
+	display:inline-table;
+	margin-left:10px;
+	margin-bottom:5px;
+	vertical-align:top;	
+}
+.availcal TABLE { 
+	border-collapse: separate; border: 1px solid #000;
+}
+.cal_main	{
+	
+	border:1px;
+	padding: 2px;
+	margin-bottom:0px;
+}
+.cal_month 	{
+	text-align:center;
+}
+.cal_post	{	
+	background-color:#F00;
+	text-align:center;
+}
+.cal_part	{	
+	background-color:#f6b283;
+	text-align:center;
+}
+.cal_empty	{
+	text-align:center;
+}
+.cal_today	{
+	text-align:center;
+	background-color:#CCC;
+}
+.cal_firstday_post	{
+	background-color:#ff9292;
+	text-align:center;
+}
+.cal_lastday_post	{	
+	background-color:#ff9292;
+	text-align:center;
+}
+.cal_firstday_part	{
+	background-color:#f1d8c6;
+	text-align:center;
+}
+.cal_lastday_part	{	
+	background-color:#f1d8c6;
+	text-align:center;
+}
+.cal_days	 {
+	
+}
+.weeknbr {
+	background-color: #eee;
+	text-align:center;
+}
+.cal_title	{
+	text-align:right;
+}
+.text_busy	{
+	color:#F00;
+	text-align:center;
+}
+.hidden	{
+	display:none;
+}
+.availcal .table_pos td {
+	text-align:right;
+	width:25px;
+	padding:0px;
+	
+	
+}
