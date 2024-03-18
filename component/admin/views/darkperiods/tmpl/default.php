@@ -7,9 +7,10 @@
  * 	@link
  * 	@license			GNU/GPL
  */
+
 // No direct access
 defined('_JEXEC') or die('Restricted access');
-JHtml::_('behavior.tooltip');
+JHtml::_('bootstrap.tooltip');
 JHTML::_('script','system/multiselect.js',false,true);
 
 

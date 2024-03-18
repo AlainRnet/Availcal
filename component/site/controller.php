@@ -12,6 +12,7 @@ defined('_JEXEC') or die('Restricted access');
  
 // import Joomla controller library
 jimport('joomla.application.component.controller');
+use Joomla\CMS\Factory;
  
 /**
  * Availal Component Controller
@@ -26,7 +27,7 @@ class AvailcalController extends JControllerLegacy
 	function display($cachable = false, $urlparams = false)
 	{
 		$format = $this->input->get( 'format', 'html');
-                $vName = $this->input->get('view', 'calendar');
+                $vName = 'calendar';//$this->input->get('view', 'calendar');
 		$view = $this->getView($vName, $format);
                 $layout = $this->input->get('layout', 'default');
 		$model = $this->getModel($vName);

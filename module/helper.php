@@ -9,13 +9,14 @@
 
 // no direct access
 defined('_JEXEC') or die;
+use Joomla\CMS\Factory;
 
 class modAvailcalHelper
 {
 	public static function getDarkperiods($params)
 	{
 		// just startup
-		$mainframe = JFactory::getApplication();
+		$mainframe = Factory::getApplication();
 
 
 		
@@ -26,7 +27,7 @@ class modAvailcalHelper
 		$dark_days = array();
 
 		//Get the database
-		$db =JFactory::getDBO();
+		$db =Factory::getDBO();
 		//Get Darkperiods
 		$query = 'SELECT start_date,end_date,busy FROM' . $db->quoteName('#__avail_calendar'). 'WHERE' . $db->quoteName('name') . ' = ' . $db->Quote($name) ;
 		$db->setQuery($query);

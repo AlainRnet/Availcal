@@ -28,12 +28,12 @@ class AvailcalViewCalendar extends JViewLegacy {
         $currentYear = $dateNow->Format('Y');
         $currentMonth = (int) $dateNow->Format('m');
         //Get request input
-        $month = JRequest::getVar('month', $currentMonth);
-        $year = JRequest::getVar('year', $currentYear);
-        $id = JRequest::getVar('id');
-        $y = JRequest::getVar('y');
-        $type = Jrequest::getVar('type');
-        $weeknumberdisplay = JRequest:: getVar('wnbrdisplay');
+        $month = Joomla\CMS\Factory::getApplication()->getInput()->get('month', $currentMonth);
+        $year = Joomla\CMS\Factory::getApplication()->getInput()->get('year', $currentYear);
+        $id = Joomla\CMS\Factory::getApplication()->getInput()->get('id');
+        $y = Joomla\CMS\Factory::getApplication()->getInput()->get('y');
+        $type = Joomla\CMS\Factory::getApplication()->getInput()->get('type');
+        $weeknumberdisplay = Joomla\CMS\Factory::getApplication()->getInput()->get('wnbrdisplay');
         //Load language file
         $language = JFactory::getLanguage();
         if (($type == 'plugin') OR ( $type == 'plugin3')) {
@@ -80,8 +80,8 @@ class AvailcalViewCalendar extends JViewLegacy {
             $dark_days = array();
 
             $month_name = JTEXT::_('month_' . $month);
-            $week_firstday = JRequest::getVar('week_firstday', 0);
-            $firstlast = JRequest::getVar('firstlast', 0);
+            $week_firstday = Joomla\CMS\Factory::getApplication()->getInput()->get('week_firstday', 0);
+            $firstlast = Joomla\CMS\Factory::getApplication()->getInput()->get('firstlast', 0);
             $header = $month_name ." " . $year;
             //Get dark periods
             $items = $this->get('Items');

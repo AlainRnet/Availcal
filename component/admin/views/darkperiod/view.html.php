@@ -3,7 +3,7 @@
 defined('_JEXEC') or die('Restricted access');
  
 // import Joomla view library
-jimport('joomla.application.component.view');
+//jimport('joomla.application.component.view');
  
 /**
  * Darkperiod View
@@ -24,7 +24,7 @@ class AvailCalViewDarkperiod extends JViewLegacy
 		// Check for errors.
 		if (count($errors = $this->get('Errors'))) 
 		{
-			JError::raiseError(500, implode('<br />', $errors));
+			throw new Exception(implode('<br />', $errors),500);
 			return false;
 		}
 		// Assign the Data
@@ -38,7 +38,7 @@ class AvailCalViewDarkperiod extends JViewLegacy
 		// Display the template
 		parent::display($tpl);
 		// Set the document
-		$this->setDocument();
+		$this->setupDocument();
 		
 	}
  
@@ -58,7 +58,7 @@ class AvailCalViewDarkperiod extends JViewLegacy
 	 *
 	 * @return void
 	 */
-	protected function setDocument() 
+	protected function setupDocument() 
 	{
 		$isNew = ($this->item->id < 1);
 		$document = JFactory::getDocument();

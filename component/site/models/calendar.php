@@ -3,7 +3,7 @@
 defined('_JEXEC') or die('Restricted access');
 
 // import Joomla modelitem library
-jimport('joomla.application.component.modellist');
+//jimport('joomla.application.component.modellist');
 
 /**
  * Availability Calendar Site calendar model
@@ -19,7 +19,7 @@ class AvailcalModelCalendar extends JModelList
 	protected  function _getListQuery()
 	{
 		// Get id
-		$id = JRequest::getVar( 'id');		
+		$id = Joomla\CMS\Factory::getApplication()->getInput()->get( 'id');		
 		// Create a new query object.
 		$db = JFactory::getDBO();
 		$query = $db->getQuery(true);
@@ -43,11 +43,11 @@ class AvailcalModelCalendar extends JModelList
 		$query = $this->_getListQuery();
 	//Changed for Availcal Get all records
 		$items = $this->_getList($query, 0, 0);  //  Second argument provides the limitstart, Third argument provides limit
-	//End change for Availcal
+	/*/End change for Availcal // to FIX
 		if ($this->_db->getErrorNum()){
 			$this->setError($this->_db->getErrorMsg());
 			return false;
-		}
+		}/**/
 		$this->cache[$store] = $items;
 		return $this->cache[$store];
 	}	

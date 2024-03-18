@@ -1,10 +1,8 @@
 <?php
 // No direct access
 defined('_JEXEC') or die('Restricted access');
-//JHtml::_('behavior.tooltip');
-JHtml::_('behavior.formvalidation');
-//JHtml::_('formbehavior.chosen', 'select');
-//JHtml::_('behavior.keepalive');
+JHtml::_('bootstrap.tooltip');
+JHtml::_('behavior.formvalidator');
 
 ?>
 <form
@@ -35,3 +33,10 @@ JHtml::_('behavior.formvalidation');
 	<?php echo JHtml::_('form.token'); ?>
 
 </form>
+<script type="text/javascript">
+function VerifDate()
+{if (document.getElementById("jform_end_date").value<document.getElementById("jform_start_date").value) {
+document.getElementById('jform_end_date').value=document.getElementById('jform_start_date').value;
+document.getElementById('jform_end_date').setAttribute('data-alt-value',document.getElementById('jform_start_date').value);
+}}
+</script>
